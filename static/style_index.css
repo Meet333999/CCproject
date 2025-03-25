@@ -1,0 +1,103 @@
+/* Inline styles specific to the index.html */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Dark Navy */
+    color: #EAEAEA; /* Light Gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; 
+    overflow: hidden;
+}
+
+.content-box {
+    padding: 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    position: relative; 
+    z-index: 1; 
+    animation: floatAnimation 3s ease-in-out infinite; 
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 0, 0.3) 0%, /* Bright Yellow */
+        rgba(255, 255, 0, 0.3) 5%,
+        transparent 5%,
+        transparent 100%
+    );
+    animation: raysSpin 4s linear infinite; /* Slightly faster rotation */
+    z-index: 0; 
+}
+
+@keyframes raysSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+header h1 {
+    font-size: 2.8rem; /* Slightly larger */
+    margin-bottom: 20px;
+    letter-spacing: 3px; /* More spacing */
+    color: #FFBF00; /* Amber */
+}
+
+header h2 {
+    font-size: 1.7rem; /* Slightly larger */
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold */
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 1.2rem; /* Slightly larger */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #3f3d56; /* Dark Slate Blue */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.3rem; /* Slightly larger */
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #2d2b43; /* Darker Slate Blue */
+    transform: scale(1.1); /* Slight pop effect */
+}

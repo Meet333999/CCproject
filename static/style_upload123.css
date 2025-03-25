@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    background-color: #0f0f0f; 
+    font-family: 'Poppins', sans-serif; 
+    color: #eaeaea; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #181818; 
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #555; 
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+header h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #bbbbbb;
+}
+
+section#upload {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #202020;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.upload-area {
+    margin: 30px 0;
+    border: 3px dashed #eaeaea;
+    padding: 20px;
+    background-color: #2e2e2e;
+    position: relative;
+    color: #eaeaea;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    background-color: #3a3a3a;
+    border-color: #87d3c5;
+}
+
+.upload-area label {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Preview container */
+.preview-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#videoPreview, #imagePreview {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+button#submitButton {
+    padding: 12px 24px;
+    background-color: #87d3c5; 
+    color: #0f0f0f;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#submitButton:hover {
+    background-color: #6ab1a3; 
+}
+
+.preview {
+    margin-top: 20px;
+    border: 2px dashed #aaaaaa;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #f0f0f0;
+    color: #666666; 
+}
+
+.preview img {
+    max-width: 100%;
+    max-height: 100%;
+}

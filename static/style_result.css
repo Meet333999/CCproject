@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+h1.heading {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+h2.subheading {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p.confidence {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.frame-heading {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Swiper styles */
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 auto;
+    
+}
+
+.swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.frame-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0px 0px 50px rgba(182, 172, 172, 0.618);
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+    margin-top :50px;
+    color: #f04e4e;
+    color: #f04e4e var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+/* Swiper pagination (dots) */
+.swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+hr {
+    margin: 30px 0;
+    border: 1px solid #444;
+}
+
+/* Back button */
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.back-link {
+    text-decoration: none;
+}
+
+.back-button {
+    background-color: #f04e4e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff6767;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    h1.heading {
+        font-size: 2.4rem;
+    }
+
+    h2.subheading {
+        font-size: 1.5rem;
+    }
+
+    p.confidence {
+        font-size: 1.1rem;
+    }
+
+    .frame-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .back-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.heading {
+        font-size: 2rem;
+    }
+
+    h2.subheading {
+        font-size: 1.3rem;
+    }
+
+    p.confidence {
+        font-size: 1rem;
+    }
+
+    .frame-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .back-button {
+        font-size: 0.9rem;
+    }
+}
+
