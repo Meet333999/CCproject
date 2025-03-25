@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection for Videos and Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_upload123.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Deepfake Detection for Videos and Images</h1>
+        <h2>Upload your video or image to check its authenticity and protect yourself from deepfakes!</h2>
+    </header>
+    <section id="upload">
+        <h2>Upload Your Video or Image</h2>
+        <p>Supported formats: MP4, JPG, PNG</p>
+        <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" accept=".mp4, .jpg, .jpeg, .png" id="fileInput" name="file">
+                <label for="fileInput">Drop your file here or click to upload</label>
+                <div id="preview" class="preview"></div> <!-- Preview container for file name -->
+            </div>
+            <button type="submit" id="submitButton">Check for Deepfake</button>
+        </form>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

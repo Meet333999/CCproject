@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_result.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header>
+        <h1 class="heading">Detection Result</h1>
+        <hr>
+    </header>
+    
+    <section id="result">
+        <h2 class="subheading">Average Prediction: {{ result }}</h2>
+        <p class="confidence">Confidence Score for Real Media: {{ score }}%</p>
+
+        <div id="frames">
+            <h3 class="frame-heading">Extracted Frames:</h3>
+            
+            <!-- Swiper container -->
+            <div class="swiper-container">
+                <!-- Wrapper for slides -->
+                <div class="swiper-wrapper">
+                    {% for frame in frame_paths %}
+                    <!-- Each slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ frame }}" alt="Extracted Frame {{ loop.index }}" class="frame-image">
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <!-- Swiper navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Swiper pagination (dots) -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="back-button-container">
+            <a href="{{ url_for('index') }}" class="back-link">
+                <button class="back-button">Go Back to Home</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Swiper.js Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Initialization -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 7, 
+            spaceBetween: 5, 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 7,
+                    spaceBetween: 5,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

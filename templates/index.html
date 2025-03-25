@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+    
+</head>
+<body>
+    <div class="rays"></div> <!-- Background animation -->
+    <div class="content-box">
+        <header>
+            <h1>Deepfake Detector</h1>
+            <p>identify manipulated video content and provides accurate analysis.</p>
+            <a href="{{ url_for('upload_file') }}" class="cta-button">Start Now</a>
+        </header>
+    </div>
+</body>
+</html>
